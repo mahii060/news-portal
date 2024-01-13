@@ -5,7 +5,7 @@ const fetchCategories = () => {
         .then(data => { showCategories(data.data.news_category) })
 };
 const showCategories = (categories) => {
-    console.log(categories)
+    // console.log(categories)
     const categoriesContainer = document.getElementById('categories-container');
     categories.forEach((singleCategory) => {
         // console.log(singleCategory)
@@ -26,7 +26,7 @@ const fetchAllCategoryNews = (category_id, category_name) => {
         })
 };
 const showAllCategoryNews = (categoryAllNews, category_name) => {
-    console.log(categoryAllNews);
+    // console.log(categoryAllNews);
     document.getElementById('news-count').innerHTML = categoryAllNews.length;
     document.getElementById('category-name').innerHTML = category_name;
     const allNewsContainer = document.getElementById('all-news');
