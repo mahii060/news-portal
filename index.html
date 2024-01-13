@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban News</title>
+    <!-- Bootstrap link starts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap link ends -->
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/412a0cf533.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: #e3dfdf" onload="fetchCategories()">
+    <!-- Header starts here -->
+    <header class="container p-0">
+        <!-- Navbar goes here -->
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="#"><button class="btn btn-primary">News</button> Portal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active text-primary" aria-current="page" href="#">News</a>
+                        <a class="nav-link" href="#">Blogs</a>
+                        <a class="nav-link" href="#"><img src="../news-portal/assets/Avatar.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <hr class="container" />
+        <!-- Navbar ends here -->
+        <section class="container categories-container d-flex flex-wrap justify-content-between"
+            id="categories-container">
+
+        </section>
+    </header>
+    <!-- Header ends here -->
+
+    <!-- Main section starts -->
+    <main>
+    </main>
+    <!-- Main section ends -->
+    <section class="container">
+        <!-- Alert section starts -->
+        <div class="alert alert-light my-3" role="alert">
+            <span id="news-count">8</span> items found for <span id="category-name">Breaking News</span> category.
+        </div>
+        <!-- Alert section starts -->
+    </section>
+    <!-- sorting section starts -->
+    <section class="container d-flex justify-content-between">
+        <div class="d-flex gap-2 justify-content-center align-items-center">
+            <p class="p-0 m-0">Select by:</p>
+            <div>
+                <select class="form-select" aria-label="Floating label select example">
+                    <option selected>Default</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+        </div>
+        <div class="d-flex gap-3">
+            <button class="btn btn-primary" onclick="showTodaysPick()">Today's pick</button>
+            <button class="btn btn-outline-primary" onclick="showTrending()"> Trending</button>
+        </div>
+
+    </section>
+    <!-- sorting section ends -->
+
+    <!-- All news section starts -->
+    <section class="container my-3" id="all-news">
+
+    </section>
+    <!-- All news section ends -->
+
+    <!-- Modal to display single news starts -->
+    <section>
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+        </button> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal to display single news ends -->
+
+    <!-- footer starts -->
+    <footer></footer>
+    <!-- footer ends -->
+
+    <!-- scripts goes here -->
+    <script src="./news.js"></script>
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
